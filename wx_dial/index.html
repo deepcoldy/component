@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <title>来电话了</title>
-    <script src="main.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css">
+    <script type="text/javascript" src="http://rescdn.g1kt.com/jquery-1.11.3.js"></script>
+    <script src="main.js"></script>
 </head>
-<body>
+<body onload="show();flip();">
+<div id="first" style="display: block;">
     <div class="top">
         <img src="img/signal.png">
         <img src="img/wifi.png">
@@ -34,12 +36,32 @@
         <div class="fixheight"></div>
         <div class="round">
             <div class="refuse"></div>
-            <div class="answer"></div>
+            <div class="answer" id="answer"></div>
         </div>
         <div class="text">
         <p class="r-text">接听</p>
         <p class="m-text">拒绝</p>
         </div>
     </div>
+</div>
+    
+
+<div id="second" style="display: none;">
+    <video id="myVideo" preload="auto" width=100% autoplay="autoplay">
+        <source src="sample.mp4" type="video/mp4">
+    </video>
+    <div class="refuse" id="control" hidden></div>
+    <div id="warning" style="display: none;">
+        <p>拜托,别挂我电话嘛</p>
+    </div>
+</div>
+
+<div class="hidden" >
+    <audio id="audio" autoplay="false" loop="true">
+        <source src="src/ring.mp3" type="audio/mp3">
+        <source src="src/ring.ogg" type="audio/ogg">
+    </audio>    
+</div>
 </body>
+
 </html>

@@ -102,16 +102,42 @@ p:nth-child(3){
     background-position: 0px 76px;
     background-size: 120%;
 }
-
+/*iphone6*/
 @media screen and (min-height: 550px) {
     .fixheight{
         height: 30px;
     }
 
 }
+/*iphone6 plus*/
 @media screen and (min-height: 668px) {
     .fixheight{
         height: 80px;
     }
 
+}
+/*翻页*/
+#first{
+    display: block;
+}
+#second{
+    display: none;
+}
+#control{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform:translateX(-100%);
+}
+#warning{
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform:translateX(-50%);
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    width: 180px;
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
 }
