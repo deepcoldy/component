@@ -1,2 +1,3 @@
-# component
-Small create plugin or function
+# Use
+Just run by your mobile web broswer
+
